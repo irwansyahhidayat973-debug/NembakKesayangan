@@ -1,0 +1,104 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ffc0cb 0%, #f7797d 100%); /* Gradasi Pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #4b0082; /* Ungu gelap */
+    text-align: center;
+    overflow: hidden; /* Penting untuk animasi tombol 'No' */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 450px;
+    position: relative;
+}
+
+h1 {
+    color: #ff1493; /* Deep Pink */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #8b0000; /* Dark Red */
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.cute-btn {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+    border: 3px solid #e91e63;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 50px; /* Bentuk pil */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #e91e63;
+    transition: all 0.2s ease-in-out;
+}
+
+.cute-btn:hover {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #c2185b;
+}
+
+.cute-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #c2185b;
+}
+
+/* Styling Khusus Tombol Jawaban */
+#button-area {
+    min-height: 150px; /* Memberi ruang bagi tombol 'No' untuk bergerak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    /* Memberi batas visual area pergerakan */
+    border: 2px dashed rgba(255, 105, 180, 0.5); 
+    border-radius: 10px;
+}
+
+#yes-btn {
+    /* Pastikan tombol 'Iya' punya posisi tetap */
+    position: absolute;
+    left: 10%; /* Atur posisi agar tidak tertutup */
+}
+
+#no-btn {
+    /* Posisi Awal tombol 'No' */
+    position: absolute;
+    right: 10%; /* Atur posisi awal */
+    transition: all 0.2s ease; /* Transisi untuk gerakan smooth */
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    font-size: 1.5em;
+    color: green;
+    font-weight: bold;
+    margin-top: 30px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
